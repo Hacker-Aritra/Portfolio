@@ -24,9 +24,14 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#experience">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <i class="fa-solid fa-moon theme-icon-dark"></i>
+            <i class="fa-solid fa-sun theme-icon-light"></i>
+        </button>
         <div class="hamburger" id="hamburger">
             <span></span><span></span><span></span>
         </div>
@@ -37,8 +42,14 @@
         <a href="#home" class="mobile-link">Home</a>
         <a href="#about" class="mobile-link">About</a>
         <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#certifications" class="mobile-link">Certifications</a>
         <a href="#experience" class="mobile-link">Education</a>
         <a href="#contact" class="mobile-link">Contact</a>
+        <a href="./assests/resume.pdf" class="mobile-link" download>Download Resume ↓</a>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <i class="fa-solid fa-moon theme-icon-dark"></i>
+            <i class="fa-solid fa-sun theme-icon-light"></i>
+        </button>
     </div>
 
     <!-- HERO -->
@@ -58,6 +69,7 @@
             <div class="hero-actions">
                 <a href="#projects" class="btn btn-primary">View Projects ↓</a>
                 <a href="#contact" class="btn btn-outline">Get In Touch →</a>
+                <a href="https://shorturl.at/fnVBM" class="btn btn-outline" download>Download Resume ⤓</a>
             </div>
         </div>
 
@@ -68,7 +80,6 @@
                 <div class="dot dot-g"></div>
             </div>
             <div>
-                <!-- <span class="code-cm">// src/engineer.ts</span><br> -->
                 <span class="code-kw">const</span> <span class="code-fn">me</span> = {<br>
                 &nbsp;&nbsp;name: <span class="code-str">"Aritra Basu"</span>,<br>
                 &nbsp;&nbsp;role: <span class="code-str">"CS Engineer"</span>,<br>
@@ -82,10 +93,7 @@
             </div>
         </div>
 
-        <div class="scroll-hint">
-            <div class="scroll-line"></div>
-            scroll
-        </div>
+      
     </section>
 
     <!-- ABOUT -->
@@ -97,10 +105,7 @@
                         <div class="about-deco"></div>
                         <div class="about-avatar">
                             <div class="avatar-overlay"></div>
-                            <!-- <span class="avatar-initials"> -->
-                                <!-- <img src="./Assests/pics/me.jpeg" alt="Aritra Basu" class="me_img"> -->
-                                 <img src="./assests/pics/Me1.jpeg" alt="Aritra Basu" class="me_img">
-                            <!-- </span> -->
+                            <img src="./assests/pics/Me1.jpeg" alt="Aritra Basu" class="me_img">
                             <div class="avatar-label">// open to work</div>
                         </div>
                     </div>
@@ -110,7 +115,7 @@
                             <span class="stat-lbl">Projects</span>
                         </div>
                         <div class="stat-box">
-                            <span class="stat-num">4</span>
+                            <span class="stat-num">6</span>
                             <span class="stat-lbl">Certificates</span>
                         </div>
                         <div class="stat-box">
@@ -132,7 +137,6 @@
                             engineering, or data analysis roles.</p>
                     </div>
                     <div class="tag-row">
-                        <!-- <span class="tag">React</span> -->
                         <span class="tag">JavaScript</span>
                         <span class="tag">Python</span>
                         <span class="tag">CSS</span>
@@ -148,107 +152,6 @@
             </div>
         </div>
     </section>
-
-    <!-- SKILLS -->
-    <!-- <section id="skills">
-        <div class="section-inner">
-            <div class="skills-intro reveal">
-                <div class="section-label">Technical Stack</div>
-                <h2 class="section-title">What I work with</h2>
-                <p class="section-desc">A snapshot of my current technical skill set across different domains.</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card reveal" style="transition-delay:.05s">
-                    <span class="skill-icon">💻</span>
-                    <div class="skill-card-title">Languages & Web</div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>Python</span><span>90%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>SQL</span><span>85%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>JavaScript / HTML / CSS / PHP</span><span>80%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="80"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card reveal" data-accent="purple" style="transition-delay:.1s">
-                    <span class="skill-icon">📊</span>
-                    <div class="skill-card-title">Data Analysis & BI</div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>Excel (Pivot Tables, Dashboards)</span><span>88%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="88"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>Power BI (DAX, KPI Dashboards)</span><span>82%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="82"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>Pandas / NumPy / Tableau</span><span>85%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="85"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card reveal" data-accent="red" style="transition-delay:.15s">
-                    <span class="skill-icon">🧠</span>
-                    <div class="skill-card-title">AI / ML & Computer Vision</div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>OpenCV / Tesseract OCR</span><span>82%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="82"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>TensorFlow</span><span>72%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="72"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>scikit-learn</span><span>75%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="75"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card reveal" data-accent="yellow" style="transition-delay:.2s">
-                    <span class="skill-icon">🛠️</span>
-                    <div class="skill-card-title">Databases & Tools</div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>MySQL / PostgreSQL</span><span>85%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>Git / GitHub</span><span>80%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="80"></div>
-                        </div>
-                    </div>
-                    <div class="skill-bar-row">
-                        <div class="skill-bar-label"><span>Docker / Linux</span><span>70%</span></div>
-                        <div class="skill-bar-track">
-                            <div class="skill-bar-fill" data-w="70"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- PROJECTS -->
     <section id="projects">
@@ -288,7 +191,7 @@
                             <span class="stack-tag">MySQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Hacker-Aritra/GETResume" class="project-link">⌥ GitHub</a>
+                            <a href="https://github.com/Hacker-Aritra/GETResume" target="_blank" class="project-link">⌥ GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -297,25 +200,25 @@
                     <div class="project-thumb">
                         <div class="project-thumb-bg" style="background: linear-gradient(135deg,#1a0f08,#2e1a08);">
                         </div>
-                        <span class="project-thumb-icon">💊</span>
+                        <span class="project-thumb-icon">📄</span>
                     </div>
                     <div class="project-body">
                         <div class="project-meta">
                             <span class="project-type">ML / AI</span>
                             <span class="project-year">2025</span>
                         </div>
-                        <div class="project-title">Medi Miracle — Prescription Digitisation</div>
-                        <div class="project-desc">End-to-end OCR pipeline (preprocessing → CNN segmentation → Tesseract) turning doctors' handwritten prescriptions into searchable digital text at ~88% character-level accuracy.</div>
+                        <div class="project-title">AI Resume Analyser</div>
+                        <div class="project-desc">Streamlit web app using NLP (spaCy, pyresparser) to parse PDF resumes, classify candidates into career fields, generate personalised skill/course recommendations, and score resumes out of 100 with a Plotly-powered admin analytics dashboard.</div>
                         <div class="project-stack">
-                            <span class="stack-tag">Python</span>
-                            <span class="stack-tag">TensorFlow</span>
-                            <span class="stack-tag">OpenCV</span>
-                            <span class="stack-tag">Tesseract OCR</span>
-                            <span class="stack-tag">Flask</span>
+                            <span class="stack-tag">Streamlit</span>
+                            <span class="stack-tag">spaCy</span>
+                            <span class="stack-tag">Pandas</span>
+                            <span class="stack-tag">NumPy</span>
+                            <span class="stack-tag">Plotly</span>
                             <span class="stack-tag">MySQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">⌥ GitHub</a>
+                            <a href="https://github.com/Hacker-Aritra/AI_Resume_Analyzer" target="_blank" class="project-link">⌥ GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -340,7 +243,7 @@
                             <span class="stack-tag">Monte Carlo</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">⌥ GitHub</a>
+                            <a href="https://github.com/Hacker-Aritra/Trading-Performance-Analysis" target="_blank" class="project-link">⌥ GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -364,13 +267,96 @@
                             <span class="stack-tag">EDA</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">⌥ GitHub</a>
+                            <a href="https://github.com/Hacker-Aritra/inventory_analysis" target="_blank" class="project-link">⌥ GitHub</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+        <div class="section-inner">
+            <div class="reveal">
+                <div class="section-label">Credentials</div>
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-desc">Courses and programs completed.</p>
+            </div>
+            <div class="cert-grid">
+                <!-- Cert 1 -->
+                <div class="cert-card reveal" style="transition-delay:.05s">
+                    <div class="cert-icon">📊</div>
+                    <div class="cert-body">
+                        <div class="cert-date">6 July 2026</div>
+                        <div class="cert-title">Power BI for Beginners</div>
+                        <div class="cert-issuer">Microsoft · Simplilearn SkillUp</div>
+                        <button class="cert-preview-btn" data-cert-img="./assests/pics/PowerBI.png" data-cert-title="Power BI for Beginners">⌕ Preview</button>
+                    </div>
+                </div>
+                <!-- Cert 2 -->
+                <div class="cert-card reveal" style="transition-delay:.1s">
+                    <div class="cert-icon">📈</div>
+                    <div class="cert-body">
+                        <div class="cert-date">5 July 2026</div>
+                        <div class="cert-title">Introduction to Data Analytics</div>
+                        <div class="cert-issuer">Simplilearn SkillUp</div>
+                        <button class="cert-preview-btn" data-cert-img="./assests/pics/Data Analytics.png" data-cert-title="Introduction to Data Analytics">⌕ Preview</button>
+                    </div>
+                </div>
+                <!-- Cert 3 -->
+                <div class="cert-card reveal" style="transition-delay:.15s">
+                    <div class="cert-icon">💻</div>
+                    <div class="cert-body">
+                        <div class="cert-date">21 March 2024</div>
+                        <div class="cert-title">Full Stack Web Application Development</div>
+                        <div class="cert-issuer">JavaScript University, Arizona</div>
+                        <button class="cert-preview-btn" data-cert-img="./assests/pics/js university.jpg" data-cert-title="Full Stack Web Application Development">⌕ Preview</button>
+                    </div>
+                </div>
+                <!-- Cert 4 -->
+                <div class="cert-card reveal" style="transition-delay:.2s">
+                    <div class="cert-icon">🗄️</div>
+                    <div class="cert-body">
+                        <div class="cert-date">Mar – Jun 2023</div>
+                        <div class="cert-title">Web & Database Programming with PL/SQL</div>
+                        <div class="cert-issuer">Oracle Academy</div>
+                        <button class="cert-preview-btn" data-cert-img="./assests/pics/oracle academy.jpg" data-cert-title="Web & Database Programming with PL/SQL">⌕ Preview</button>
+                    </div>
+                </div>
+                <!-- Cert 5 -->
+                <div class="cert-card reveal" style="transition-delay:.25s">
+                    <div class="cert-icon">⛓️</div>
+                    <div class="cert-body">
+                        <div class="cert-date">2022</div>
+                        <div class="cert-title">Blockchain TechCamp</div>
+                        <div class="cert-issuer">Hack2Skill · Spheron Protocol</div>
+                        <button class="cert-preview-btn" data-cert-img="./assests/pics/h2s.jpg" data-cert-title="Blockchain TechCamp">⌕ Preview</button>
+                    </div>
+                </div>
+                <!-- Cert 6 -->
+                <div class="cert-card reveal" style="transition-delay:.3s">
+                    <div class="cert-icon">🐙</div>
+                    <div class="cert-body">
+                        <div class="cert-date">14 November 2022</div>
+                        <div class="cert-title">GitHub Universe Watch Party & Intro to Codespaces</div>
+                        <div class="cert-issuer">Microsoft Learn Student Ambassadors</div>
+                        <button class="cert-preview-btn" data-cert-img="./assests/pics/mlsa.jpg" data-cert-title="GitHub Universe Watch Party & Intro to Codespaces">⌕ Preview</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERT PREVIEW MODAL -->
+    <div class="cert-modal" id="certModal">
+        <div class="cert-modal-backdrop" id="certModalBackdrop"></div>
+        <div class="cert-modal-inner">
+            <button class="cert-modal-close" id="certModalClose" aria-label="Close preview">✕</button>
+            <img src="" alt="Certificate preview" id="certModalImg" class="cert-modal-img">
+            <div class="cert-modal-caption" id="certModalCaption"></div>
+        </div>
+    </div>
 
     <!-- EXPERIENCE -->
     <section id="experience">
@@ -409,15 +395,6 @@
                         <li>Improved API documentation site lighthouse score from 64 → 96</li>
                     </ul>
                 </div>
-                <!-- <div class="timeline-item reveal" style="transition-delay:.2s">
-                    <div class="tl-date">Sep 2022 — Present</div>
-                    <div class="tl-role">B.S. Computer Engineering</div>
-                    <div class="tl-company">Massachusetts Institute of Technology (MIT) — GPA 4.0</div>
-                    <ul class="tl-points">
-                        <li>Relevant: 6.004 Computation Structures, 6.046 Algorithms, 6.S898 Deep Learning</li>
-                        <li>Teaching Assistant for 6.009 Fundamentals of Programming (2 semesters)</li>
-                    </ul>
-                </div> -->
             </div>
         </div>
     </section>
@@ -458,31 +435,36 @@
                                 <div class="contact-link-sub">github.com/Hacker-Aritra</div>
                             </div>
                         </a>
-                        <a href="https://linktr.ee/Aritra_Certificates" class="contact-link">
+                        <a href="https://shorturl.at/fnVBM" class="contact-link">
                             <div class="contact-link-icon"><i class="fa-brands fa-linktree"></i></div>
                             <div>
-                                <div class="contact-link-text">Linktree</div>
-                                <div class="contact-link-sub">linktree.com/aritrabasu</div>
+                                <div class="contact-link-text">Resumes</div>
+                                <div class="contact-link-sub">linktree.com/aritra_resumes</div>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="reveal" style="transition-delay:.1s">
-                    <div class="contact-form">
+                    <form class="contact-form" id="contactForm" novalidate>
                         <div class="form-group">
-                            <label>Your name</label>
-                            <input type="text" id="fname" placeholder="Please enter your name" />
+                            <label for="fname">Your name</label>
+                            <input type="text" id="fname" name="name" placeholder="Please enter your name" required />
+                            <span class="form-error" id="fnameError"></span>
                         </div>
                         <div class="form-group">
-                            <label>Email address</label>
-                            <input type="email" id="femail" placeholder="Please enter your email" />
+                            <label for="femail">Email address</label>
+                            <input type="email" id="femail" name="email" placeholder="Please enter your email" required />
+                            <span class="form-error" id="femailError"></span>
                         </div>
                         <div class="form-group">
-                            <label>Message</label>
-                            <textarea id="fmsg" placeholder="Hey Aritra, I'd love to chat about..."></textarea>
+                            <label for="fmsg">Message</label>
+                            <textarea id="fmsg" name="message" placeholder="Hey Aritra, I'd love to chat about..." required></textarea>
+                            <span class="form-error" id="fmsgError"></span>
                         </div>
-                        <button class="form-submit" id="formBtn">Send Message →</button>
-                    </div>
+                        <button type="submit" class="form-submit" id="formBtn">
+                            <span class="btn-label">Send Message →</span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -494,12 +476,12 @@
         <div class="social-row">
             <a href="https://github.com/Hacker-Aritra" class="social-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/aritrabasu2003/" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://linktr.ee/Aritra_Certificates" class="social-link" title="linktree"><i class="fa-brands fa-linktree"></i></i></a>
+            <a href="https://shorturl.at/fnVBM" class="social-link" title="linktree"><i class="fa-brands fa-linktree"></i></i></a>
             <a href="mailto:aritra.1214@gmail.com" class="social-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </footer>
 
-    <div class="toast" id="toast">✓ Message sent! I'll reply within 24h.</div>
+    <div class="toast" id="toast">✓ Message sent!</div>
 
    <script src="./assests/script.js"></script>
 </body>
