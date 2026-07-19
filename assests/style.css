@@ -12,6 +12,18 @@
      --font-mono: 'Space Mono', monospace;
  }
 
+ html[data-theme="light"] {
+     --bg: #f7f7fb;
+     --surface: #ffffff;
+     --card: #f0f0f7;
+     --border: #dcdce6;
+     --accent: #06b981;
+     --accent2: #6247e0;
+     --accent3: #e0392c;
+     --text: #16161f;
+     --muted: #5a5a78;
+ }
+
  *,
  *::before,
  *::after {
@@ -30,6 +42,7 @@
      font-family: var(--font-display);
      overflow-x: hidden;
      cursor: none;
+     transition: background-color .3s, color .3s;
  }
 
  /* Custom cursor */
@@ -155,6 +168,44 @@
 
  .nav-links a:hover::after {
      width: 100%;
+ }
+
+ /* Theme toggle */
+ .theme-toggle {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 38px;
+     height: 38px;
+     border: 1px solid var(--border);
+     border-radius: 50%;
+     background: var(--card);
+     color: var(--text);
+     cursor: none;
+     font-size: 0.85rem;
+     transition: border-color .3s, color .3s, background .3s;
+     margin-left: 1rem;
+ }
+
+ .theme-toggle:hover {
+     border-color: var(--accent);
+     color: var(--accent);
+ }
+
+ .theme-icon-light {
+     display: none;
+ }
+
+ html[data-theme="light"] .theme-icon-dark {
+     display: none;
+ }
+
+ html[data-theme="light"] .theme-icon-light {
+     display: inline;
+ }
+
+ .theme-toggle-mobile {
+     margin: 1.5rem auto 0;
  }
 
  /* Hamburger */
@@ -460,57 +511,7 @@
      }
  }
 
- /* Scroll indicator */
- .scroll-hint {
-     position: absolute;
-     bottom: 2.5rem;
-     left: 50%;
-     transform: translateX(-50%);
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     gap: .5rem;
-     font-family: var(--font-mono);
-     font-size: 0.65rem;
-     color: var(--muted);
-     letter-spacing: 0.14em;
-     text-transform: uppercase;
-     animation: fadeUp .8s 1.2s forwards;
-     opacity: 0;
- }
-
- .scroll-line {
-     width: 1px;
-     height: 48px;
-     background: linear-gradient(to bottom, var(--accent), transparent);
-     animation: scrollPulse 2s ease-in-out infinite;
- }
-
- @keyframes scrollPulse {
-
-     0%,
-     100% {
-         opacity: .3;
-         transform: scaleY(1);
-     }
-
-     50% {
-         opacity: 1;
-         transform: scaleY(0.6);
-     }
- }
-
- @keyframes fadeUp {
-     from {
-         opacity: 0;
-         transform: translateY(28px);
-     }
-
-     to {
-         opacity: 1;
-         transform: translateY(0);
-     }
- }
+ 
 
  /* ---- SECTION BASE ---- */
  section {
@@ -725,108 +726,6 @@
      color: var(--accent);
  }
 
- /* ---- SKILLS ---- */
- #skills {
-     background: var(--bg);
- }
-
- .skills-intro {
-     margin-bottom: 3.5rem;
- }
-
- .skills-grid {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-     gap: 1.5rem;
- }
-
- .skill-card {
-     background: var(--card);
-     border: 1px solid var(--border);
-     border-radius: 12px;
-     padding: 1.8rem;
-     transition: border-color .3s, transform .3s, box-shadow .3s;
-     position: relative;
-     overflow: hidden;
- }
-
- .skill-card::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     height: 2px;
-     background: var(--card-accent, var(--accent));
-     transform: scaleX(0);
-     transform-origin: left;
-     transition: transform .4s;
- }
-
- .skill-card:hover {
-     border-color: var(--card-accent, var(--accent));
-     transform: translateY(-4px);
-     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
- }
-
- .skill-card:hover::before {
-     transform: scaleX(1);
- }
-
- .skill-card[data-accent="purple"] {
-     --card-accent: var(--accent2);
- }
-
- .skill-card[data-accent="red"] {
-     --card-accent: var(--accent3);
- }
-
- .skill-card[data-accent="yellow"] {
-     --card-accent: #f7c948;
- }
-
- .skill-icon {
-     font-size: 1.8rem;
-     margin-bottom: 1rem;
-     display: block;
- }
-
- .skill-card-title {
-     font-size: 1rem;
-     font-weight: 700;
-     margin-bottom: 1.2rem;
-     letter-spacing: -0.02em;
- }
-
- .skill-bar-row {
-     margin-bottom: .9rem;
- }
-
- .skill-bar-label {
-     display: flex;
-     justify-content: space-between;
-     font-family: var(--font-mono);
-     font-size: 0.7rem;
-     color: var(--muted);
-     margin-bottom: .4rem;
-     letter-spacing: 0.05em;
- }
-
- .skill-bar-track {
-     height: 3px;
-     background: var(--border);
-     border-radius: 2px;
-     overflow: hidden;
- }
-
- .skill-bar-fill {
-     height: 100%;
-     background: var(--card-accent, var(--accent));
-     border-radius: 2px;
-     width: 0;
-     transition: width 1.2s cubic-bezier(.16, 1, .3, 1);
- }
-
  /* ---- PROJECTS ---- */
  #projects {
      background: var(--surface);
@@ -995,6 +894,188 @@
 
  .project-link:hover {
      opacity: .7;
+ }
+
+ /* ---- CERTIFICATIONS ---- */
+ #certifications {
+     background: var(--surface);
+ }
+
+ .cert-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+     gap: 1.25rem;
+     margin-top: 3rem;
+ }
+
+ .cert-card {
+     display: flex;
+     align-items: flex-start;
+     gap: 1rem;
+     background: var(--card);
+     border: 1px solid var(--border);
+     border-radius: 14px;
+     padding: 1.3rem 1.4rem;
+     transition: border-color .3s, transform .35s, box-shadow .35s;
+     cursor: none;
+ }
+
+ .cert-card:hover {
+     border-color: var(--accent);
+     transform: translateY(-4px);
+     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+ }
+
+ .cert-icon {
+     flex-shrink: 0;
+     width: 46px;
+     height: 46px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 1.35rem;
+     background: var(--bg);
+     border: 1px solid var(--border);
+     border-radius: 10px;
+ }
+
+ .cert-body {
+     min-width: 0;
+ }
+
+ .cert-date {
+     font-family: var(--font-mono);
+     font-size: 0.65rem;
+     color: var(--accent);
+     letter-spacing: 0.1em;
+     text-transform: uppercase;
+     margin-bottom: .4rem;
+ }
+
+ .cert-title {
+     font-size: 0.98rem;
+     font-weight: 700;
+     letter-spacing: -0.01em;
+     line-height: 1.35;
+     margin-bottom: .35rem;
+ }
+
+ .cert-issuer {
+     font-family: var(--font-mono);
+     font-size: 0.72rem;
+     color: var(--muted);
+     line-height: 1.5;
+ }
+
+ .cert-preview-btn {
+     margin-top: .9rem;
+     display: inline-flex;
+     align-items: center;
+     gap: .35rem;
+     background: transparent;
+     border: 1px solid var(--border);
+     color: var(--accent);
+     font-family: var(--font-mono);
+     font-size: 0.7rem;
+     letter-spacing: 0.06em;
+     text-transform: uppercase;
+     padding: .45rem .8rem;
+     border-radius: 6px;
+     cursor: none;
+     transition: all .25s;
+ }
+
+ .cert-preview-btn:hover {
+     background: var(--accent);
+     border-color: var(--accent);
+     color: #0a0a0f;
+     font-weight: 700;
+ }
+
+ /* ---- CERT PREVIEW MODAL ---- */
+ .cert-modal {
+     position: fixed;
+     inset: 0;
+     z-index: 10000;
+     display: none;
+     align-items: center;
+     justify-content: center;
+     padding: 2rem;
+ }
+
+ .cert-modal.open {
+     display: flex;
+ }
+
+ .cert-modal-backdrop {
+     position: absolute;
+     inset: 0;
+     background: rgba(6, 6, 10, 0.85);
+     backdrop-filter: blur(6px);
+     cursor: none;
+ }
+
+ .cert-modal-inner {
+     position: relative;
+     z-index: 1;
+     max-width: min(90vw, 900px);
+     max-height: 90vh;
+     background: var(--card);
+     border: 1px solid var(--border);
+     border-radius: 16px;
+     padding: 1.2rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: .9rem;
+     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+     transform: scale(.94);
+     opacity: 0;
+     transition: transform .25s ease, opacity .25s ease;
+ }
+
+ .cert-modal.open .cert-modal-inner {
+     transform: scale(1);
+     opacity: 1;
+ }
+
+ .cert-modal-img {
+     max-width: 100%;
+     max-height: 72vh;
+     border-radius: 8px;
+     display: block;
+     object-fit: contain;
+     background: #fff;
+ }
+
+ .cert-modal-caption {
+     font-family: var(--font-mono);
+     font-size: 0.8rem;
+     color: var(--muted);
+     text-align: center;
+ }
+
+ .cert-modal-close {
+     position: absolute;
+     top: -14px;
+     right: -14px;
+     width: 34px;
+     height: 34px;
+     border-radius: 50%;
+     background: var(--accent);
+     color: #0a0a0f;
+     border: none;
+     font-size: 0.9rem;
+     font-weight: 700;
+     cursor: none;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: transform .2s;
+ }
+
+ .cert-modal-close:hover {
+     transform: scale(1.1);
  }
 
  /* ---- EXPERIENCE ---- */
@@ -1204,6 +1285,18 @@
      min-height: 130px;
  }
 
+ .form-group input.input-invalid,
+ .form-group textarea.input-invalid {
+     border-color: var(--accent3, #ff5c5c);
+ }
+
+ .form-error {
+     min-height: 1em;
+     font-family: var(--font-mono);
+     font-size: 0.72rem;
+     color: var(--accent3, #ff5c5c);
+ }
+
  .form-submit {
      padding: .9rem 2rem;
      background: var(--accent);
@@ -1223,6 +1316,12 @@
      background: transparent;
      color: var(--accent);
      box-shadow: inset 0 0 0 1.5px var(--accent);
+ }
+
+ .form-submit:disabled {
+     opacity: .6;
+     cursor: not-allowed;
+     pointer-events: none;
  }
 
  /* Toast */
@@ -1246,6 +1345,11 @@
  .toast.show {
      transform: none;
      opacity: 1;
+ }
+
+ .toast.toast-error {
+     border-color: var(--accent3, #ff5c5c);
+     color: var(--accent3, #ff5c5c);
  }
 
  /* ---- FOOTER ---- */
